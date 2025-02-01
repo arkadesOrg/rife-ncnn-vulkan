@@ -65,8 +65,8 @@ if(USE_SYSTEM_NCNN)
 
         find_package(glslang)
 
-        if (NOT TARGET glslang OR NOT TARGET SPIRV)
-            message(WARNING "glslang or SPIRV target not found! USE_SYSTEM_NCNN will be turned off.")
+        if (NOT TARGET glslang)
+            message(WARNING "glslang not found! USE_SYSTEM_NCNN will be turned off.")
             set(USE_SYSTEM_NCNN OFF)
         endif()
     endif()
