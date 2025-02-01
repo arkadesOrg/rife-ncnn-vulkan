@@ -63,14 +63,7 @@ if(USE_SYSTEM_NCNN)
 
         find_package(Threads)
 
-        include("${GLSLANG_TARGET_DIR}/glslang-targets.cmake")
-        # include("${GLSLANG_TARGET_DIR}/OGLCompilerTargets.cmake")
-        # if(EXISTS "${GLSLANG_TARGET_DIR}/HLSLTargets.cmake")
-        #     # hlsl support can be optional
-        #     include("${GLSLANG_TARGET_DIR}/HLSLTargets.cmake")
-        # endif()
-        # include("${GLSLANG_TARGET_DIR}/glslangTargets.cmake")
-        # include("${GLSLANG_TARGET_DIR}/SPIRVTargets.cmake")
+        find_package(glslang)
 
         if (NOT TARGET glslang OR NOT TARGET SPIRV)
             message(WARNING "glslang or SPIRV target not found! USE_SYSTEM_NCNN will be turned off.")
